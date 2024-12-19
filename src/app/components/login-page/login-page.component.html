@@ -1,0 +1,53 @@
+<div class="main">
+  <input type="checkbox" id="chk" aria-hidden="true" />
+
+  <div class="signup">
+    <form [formGroup]="signupForm">
+      <label for="chk" aria-hidden="true">Sign up</label>
+      <input
+        type="text"
+        formControlName="userName"
+        name="txt"
+        placeholder="User name"
+        required=""
+      />
+      <input
+        type="email"
+        formControlName="email"
+        name="email"
+        placeholder="Email"
+        required=""
+      />
+      
+      <input
+        type="password"
+        formControlName="password"
+        name="pswd"
+        placeholder="Password"
+        required=""
+      />
+      <button type="submit" (click)="onSubmit()">Sign up</button>
+    </form>
+  </div>
+
+  <div class="login">
+    <form [formGroup]="loginForm">
+      <label for="chk" aria-hidden="true">Login</label>
+      <input
+        type="text"
+        formControlName="userName"
+        name="userName"
+        placeholder="userName"
+        required=""
+      />
+      <input
+        type="string"
+        formControlName="password"
+        name="pswd"
+        placeholder="Password"
+        required=""
+      />
+      <button type="submit" (click)="onLogin()">Login</button>
+    </form>
+  </div>
+</div>
